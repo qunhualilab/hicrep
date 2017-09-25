@@ -94,8 +94,8 @@ data("HiCR2")
 
 The input are simply two Hi-C matrices to be compared.  The Hi-C matrices 
 should have the dimension $N\times(3+N)$. The three additional initial 
-columns are the chromosome name and mid-point coordinates of the two 
-contact bins. Here, we should a example data:
+columns are the chromosome name, start and end of the two 
+contact bins. Here, we show an example data:
 
 ```{r}
 dim(HiCR1)
