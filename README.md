@@ -1,9 +1,10 @@
 ## hicrep
 R package to evaluate the reproducibility of Hi-C data
+(Genome Research 2017. doi: 10.1101/gr.220640.117.)
 
 Tao Yang  <xadmyangt@gmail.com>
 
-##Introduction
+## Introduction
 
 Hi-C data analysis and interpretation are still in their early stages. In particular, there has been a lack of sound statistical metric to evaluate the quality of Hi-C data. When biological replicates are not available, investigators often rely on either visual inspection of Hi-C interaction heatmap or examining the ratio of long-range interaction read pairs over the total sequenced reads, neither of which are supported by robust statistics. When two or more biological replicates are available, it is a common practice to compute either Pearson or Spearman correlation coefficients between the two Hi-C data matrices and use them as a metric for quality control. However, these kind of over-simplified approaches are problematic and may lead to wrong conclusions, because they do not take into consideration of the unique characteristics of Hi-C data, such as distance-dependence and domain structures. As a result, two un-related biological samples can have a strong Pearson correlation coefficient, while two visually similar replicates can have poor Spearman correlation coefficient. It is also not uncommon to observe higher Pearson and Spearman correlations between unrelated samples than those between real biological replicates. 
 
@@ -15,20 +16,26 @@ https://github.com/MonkeyLB/hicrep/blob/master/vignettes/hicrep-vigenette.Rmd
 
 ## Citation
 
-Cite the following paper:
+Cite our paper:
 
-HiCRep: assessing the reproducibility of Hi-C data using a stratum-adjusted correlation coefficient.
-Tao Yang, Feipeng Zhang, Galip Gurkan Yardimci, Ross C Hardison, William Stafford Noble, Feng Yue, Qunhua Li
-bioRxiv 101386; doi: https://doi.org/10.1101/101386 
+HiCRep: assessing the reproducibility of Hi-C data using a 
+stratum-adjusted correlation coefficient. Tao Yang, Feipeng Zhang, Galip
+Gurkan Yardimci, Fan Song, Ross C Hardison, William Stafford Noble, 
+Feng Yue, Qunhua Li. Genome Research 2017. doi: 10.1101/gr.220640.117.
 
 
 ## Installation
+## Installation
 
-Download the source package [hicrep_0.99.2.tar.gz](https://github.com/MonkeyLB/hicrep/blob/master/hicrep_0.99.2.tar.gz) from Github.
-Or Install it from Bioconductor:
-    
-    source("https://bioconductor.org/biocLite.R")
-    biocLite("hicrep")
+Download the source package (hicrep_xxx.tar.gz) from Github.
+Or install it from Bioconductor:
+```
+## try http:// if https:// URLs are not supported
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("hicrep")
+```
 
 ## Rationale of method
 

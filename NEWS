@@ -1,9 +1,20 @@
-CHANGES IN hicrep 0.99.1:
-    1. added unit tests
-    2. adjusted spaces for the source code
-    3. added some missing part in documentation
+CHANGES IN HICREP 1.5.0
+1. added function to convert 3-column matrix to squared matrix
+2. added function to extract data from .hic format
+
+CHANGES IN hicrep 1.0.1:
+1. Input format changed form N*(N+3) to N*N
+2. prep function depcated
+3. add function fast.mean.filter() that allows users to smooth the 
+      matrix using a fast 2D filter algorithm
+4. vignette file updated
+
+CHANGES IN hicrep 0.99.0:
+1. added unit tests
+2. adjusted spaces for the source code
+3. added some missing part in documentation
 
 
 CHANGES IN hicrep 0.99.0:
-
-INITIAL RELEASE
+  
+  INITIAL RELEASE
